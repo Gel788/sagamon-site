@@ -141,7 +141,7 @@ export function Footer() {
               Сайт собрали{" "}
               <span className="text-electric">Альберт</span>
               {" "}и{" "}
-              <span className="text-hot">Кирил</span>
+              <span className="text-hot">Кирилл</span>
             </p>
             <p className="mt-2 font-cond text-sm normal-case leading-relaxed text-fg/45">
               Барабаны не трогали — только пиксели.
