@@ -2,7 +2,7 @@ export const artist = {
   name: "Давид Сагомонянц",
   stage: "SAGAMON",
   latin: "David Sagamonyants",
-  tagline: "Барабанщик · Композитор · Педагог",
+  tagline: "Отец, музыка, бизнес",
   birth: "Владикавказ, 1987",
   quote:
     "Я настоящий фанат игры на барабанах! Вся моя жизнь связана с музыкой. Весь мир меня вдохновляет!",
@@ -52,12 +52,14 @@ export const awards = [
 ] as const;
 
 export const links = {
-  boosty: "https://boosty.to/davidsagamon",
   sonor: "https://www.sonor.com/drums/artists/artists-detail/david-sagamonyants",
   zildjian: "https://zildjian.com/blogs/artist/david-sagamonyants",
+  sdDrumSchool: "https://t.me/sddrum",
   telegram: "https://t.me/sddrum",
-  instagram: "https://instagram.com/sddrumshow",
-  youtube: "https://youtube.com/@SDdrumshow",
+  shop: "https://sdmusic.shop",
+  instagram:
+    "https://www.instagram.com/sddrumshow?igsh=MWR1aDhuNDJ3ZHhvMg==",
+  youtube: "https://youtube.com/@sddrumshow?si=hAa0_OEyoucC3g-S",
   vk: "https://vk.com/sddrumshow",
 } as const;
 
@@ -65,6 +67,6 @@ export const navItems = [
   { href: "#about", label: "О музыканте" },
   { href: "#legacy", label: "Достижения" },
   { href: "#collabs", label: "Коллаборации" },
-  { href: "#festival", label: "SD Drum Show" },
+  { href: "#festival", label: "SD Drum School" },
   { href: "#contact", label: "Контакт" },
 ] as const;

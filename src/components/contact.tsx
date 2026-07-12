@@ -9,13 +9,14 @@ const ease = [0.16, 1, 0.3, 1] as const;
 const ctaLinks = [
   { label: "BOOKING@SAGAMON.RU", href: "mailto:booking@sagamon.ru", bg: "bg-electric", text: "text-bg", shadow: "var(--fg)" },
   { label: "TELEGRAM", href: links.telegram, bg: "bg-hot", text: "text-fg", shadow: "var(--fg)" },
-  { label: "BOOSTY", href: links.boosty, bg: "bg-bg-elevated", text: "text-fg", shadow: "var(--electric)" },
+  { label: "SD MUSIC SHOP", href: links.shop, bg: "bg-yellow", text: "text-bg", shadow: "var(--fg)" },
 ];
 
 const socialLinks = [
   { label: "Telegram", href: links.telegram },
   { label: "Instagram", href: links.instagram },
   { label: "YouTube", href: links.youtube },
+  { label: "SD Music Shop", href: links.shop },
   { label: "VK", href: links.vk },
   { label: "Zildjian", href: links.zildjian },
   { label: "Sonor", href: links.sonor },

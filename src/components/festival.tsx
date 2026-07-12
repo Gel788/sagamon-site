@@ -43,7 +43,7 @@ export function Festival() {
               SD{" "}
               <span className="mark bg-yellow text-bg">DRUM</span>
               <br />
-              SHOW
+              SCHOOL
             </motion.h2>
           </div>
 
@@ -54,7 +54,7 @@ export function Festival() {
               viewport={{ once: true }}
               className="text-lg leading-relaxed text-fg/90"
             >
-              Фестиваль и шоу-проект, основанный Давидом. Образование, перформанс и живая энергия драм.
+              Школа и шоу-проект, основанный Давидом. Образование, перформанс и живая энергия барабанов.
             </motion.p>
 
             <motion.ul
@@ -66,8 +66,8 @@ export function Festival() {
             >
               {[
                 "Мастер-классы и онлайн-обучение",
-                "Фестивальные выступления",
-                "Барабанный спортзал SAGAMON на Boosty",
+                "Фестивальные выступления SD Drum Show",
+                "Магазин SD Music Shop — sdmusic.shop",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 border-l-4 border-electric pl-4 font-cond text-base font-medium text-fg">
                   {item}
@@ -83,12 +83,12 @@ export function Festival() {
               className="mt-10 flex flex-wrap gap-4"
             >
               <a
-                href={links.boosty}
+                href={links.sdDrumSchool}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 border-fg bg-yellow px-8 py-4 font-display text-lg text-bg shadow-[6px_6px_0_0_var(--fg)] transition hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0_0_var(--fg)]"
               >
-                УРОКИ НА BOOSTY
+                SD DRUM SCHOOL
               </a>
               <a
                 href={links.instagram}
@@ -97,6 +97,22 @@ export function Festival() {
                 className="border-2 border-fg bg-transparent px-8 py-4 font-display text-lg text-fg transition hover:bg-fg hover:text-bg"
               >
                 INSTAGRAM
+              </a>
+              <a
+                href={links.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-fg bg-transparent px-8 py-4 font-display text-lg text-fg transition hover:bg-fg hover:text-bg"
+              >
+                YOUTUBE
+              </a>
+              <a
+                href={links.shop}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-fg bg-electric px-8 py-4 font-display text-lg text-bg shadow-[6px_6px_0_0_var(--fg)] transition hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0_0_var(--fg)]"
+              >
+                SD MUSIC SHOP
               </a>
             </motion.div>
           </div>

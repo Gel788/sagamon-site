@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
+import { artist } from "@/lib/content";
 import { images } from "@/lib/images";
 import { Ticker } from "./ticker";
 
@@ -96,7 +97,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.32 }}
             className="mt-5 font-cond text-sm font-semibold uppercase tracking-[0.22em] text-fg/65 md:text-base"
           >
-            Барабанщик&nbsp;·&nbsp;Композитор&nbsp;·&nbsp;Педагог
+            {artist.tagline}
           </motion.p>
 
           {/* кнопки */}

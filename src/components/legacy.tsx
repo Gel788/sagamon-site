@@ -39,9 +39,9 @@ export function Legacy() {
           transition={{ delay: 0.08, ease }}
           className="font-display mt-5 text-[clamp(3rem,9vw,7rem)] text-fg"
         >
-          МИРОВОЙ УРОВЕНЬ
+          ИЗ ВЛАДИКАВКАЗА
           <br />
-          <span className="mark rotate-1 bg-hot text-fg">ДОКАЗАННЫЙ РИТМ</span>
+          <span className="mark rotate-1 bg-hot text-fg">В ТОП-5 МИРА</span>
         </motion.h2>
       </div>
 
