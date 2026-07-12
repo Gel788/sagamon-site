@@ -111,7 +111,7 @@ export function Hero() {
               href="#contact"
               className="border-2 border-fg bg-electric px-7 py-3.5 font-display text-sm text-bg shadow-[5px_5px_0_0_rgba(247,247,245,0.4)] transition duration-150 hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[2px_2px_0_0_rgba(247,247,245,0.4)]"
             >
-              БУКИНГ
+              СВЯЗЬ
             </a>
             <a
               href="#about"

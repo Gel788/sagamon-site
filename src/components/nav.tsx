@@ -42,7 +42,7 @@ export function Nav() {
           href="#contact"
           className="hidden border-2 border-fg bg-electric px-5 py-2 font-display text-sm text-bg transition hover:bg-fg md:inline-flex"
         >
-          БУКИНГ
+          СВЯЗЬ
         </a>
 
         <button
@@ -86,7 +86,7 @@ export function Nav() {
                 className="mt-2 border-2 border-fg bg-electric px-5 py-3 text-center font-display text-bg"
                 onClick={() => setOpen(false)}
               >
-                БУКИНГ
+                СВЯЗЬ
               </a>
             </nav>
           </motion.div>

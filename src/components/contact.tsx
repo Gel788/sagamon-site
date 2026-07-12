@@ -47,7 +47,7 @@ export function Contact() {
             viewport={{ once: true }}
             className="sticker mx-auto mb-6 inline-block bg-electric text-bg"
           >
-            Контакт · Booking
+            Связь
           </motion.span>
           <h2
             className="font-display text-[clamp(5rem,20vw,18rem)] leading-none text-fg"
@@ -126,11 +126,34 @@ export function Contact() {
 
 export function Footer() {
   return (
-    <footer className="border-t-2 border-fg bg-bg py-8">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 text-center font-cond text-xs font-semibold uppercase tracking-wider text-fg-dim md:flex-row md:text-left lg:px-10">
-        <p className="text-fg/40">SAGAMON</p>
-        <p className="normal-case tracking-normal">© {new Date().getFullYear()} Давид Сагомонянц</p>
-        <p className="normal-case tracking-normal">Фан-трибьют · фото © TAMA / Zildjian</p>
+    <footer className="border-t-2 border-fg bg-bg">
+      <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10">
+        <div className="flex flex-col items-center justify-between gap-8 md:flex-row md:items-end">
+          <div className="text-center md:text-left">
+            <p className="font-display text-3xl text-fg/30">SAGAMON</p>
+            <p className="mt-1 font-cond text-xs font-semibold uppercase tracking-wider text-fg-dim">
+              © {new Date().getFullYear()} Давид Сагомонянц
+            </p>
+          </div>
+
+          <div className="max-w-sm text-center md:text-right">
+            <p className="font-cond text-sm font-semibold uppercase tracking-wide text-fg/70">
+              Сайт собрали{" "}
+              <span className="text-electric">Альберт</span>
+              {" "}и{" "}
+              <span className="text-hot">Кирил</span>
+            </p>
+            <p className="mt-2 font-cond text-sm normal-case leading-relaxed text-fg/45">
+              Барабаны не трогали — только пиксели.
+              <br />
+              Зато били в такт с первого дубля 🥁
+            </p>
+          </div>
+        </div>
+
+        <p className="mt-8 border-t border-fg/10 pt-5 text-center font-cond text-[10px] font-semibold uppercase tracking-widest text-fg/25">
+          Фан-трибьют · фото © TAMA / Zildjian
+        </p>
       </div>
     </footer>
   );
