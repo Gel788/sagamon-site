@@ -41,13 +41,13 @@ export function Collaborations() {
   return (
     <section
       id="collabs"
-      className="relative overflow-hidden border-t-2 border-fg bg-bg py-24 md:py-32"
+      className="relative overflow-hidden border-t-2 border-fg bg-bg py-16 sm:py-24 md:py-32"
     >
       <span aria-hidden className="wm-number pointer-events-none absolute top-0 -right-6 text-[26vw]">
         03
       </span>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-10">
         <motion.span
           initial={{ opacity: 0, y: 14, rotate: 0 }}
           whileInView={{ opacity: 1, y: 0, rotate: -3 }}
@@ -61,13 +61,13 @@ export function Collaborations() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.08, ease }}
-          className="font-display mt-5 text-[clamp(3rem,9vw,7rem)] text-fg"
+          className="font-display mt-5 text-[clamp(2rem,8vw,7rem)] leading-none text-fg"
         >
           СЦЕНЫ <span className="mark rotate-1 bg-hot text-fg">МИРА</span>
         </motion.h2>
 
         {/* artist chips */}
-        <div className="mt-12 flex flex-wrap gap-3">
+        <div className="mt-10 flex flex-wrap gap-2 sm:mt-12 sm:gap-3">
           {collaborators.map((name, i) => (
             <motion.span
               key={name}
@@ -76,7 +76,7 @@ export function Collaborations() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.04 }}
               whileHover={{ y: -5, rotate: 0, scale: 1.08 }}
-              className="border-2 border-fg bg-bg-elevated px-5 py-2.5 font-cond text-sm font-semibold uppercase tracking-wide text-fg cursor-default"
+              className="border-2 border-fg bg-bg-elevated px-3 py-2 font-cond text-xs font-semibold uppercase tracking-wide text-fg cursor-default sm:px-5 sm:py-2.5 sm:text-sm"
             >
               {name}
             </motion.span>

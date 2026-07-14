@@ -30,7 +30,7 @@ export function Contact() {
       className="relative overflow-hidden border-t-2 border-fg bg-bg"
     >
       {/* huge ИГРАЕМ? across entire width */}
-      <div className="relative border-b-2 border-fg py-10 md:py-16">
+      <div className="relative border-b-2 border-fg py-8 sm:py-10 md:py-16">
         <span aria-hidden className="wm-number pointer-events-none absolute -bottom-12 left-1/2 -translate-x-1/2 text-[32vw]">
           05
         </span>
@@ -49,21 +49,18 @@ export function Contact() {
           >
             Связь
           </motion.span>
-          <h2
-            className="font-display text-[clamp(5rem,20vw,18rem)] leading-none text-fg"
-            style={{ letterSpacing: "-0.02em" }}
-          >
+          <h2 className="font-display text-[clamp(3.5rem,18vw,18rem)] leading-none text-fg">
             ИГРАЕМ<span className="text-hot">?</span>
           </h2>
         </motion.div>
       </div>
 
-      <div className="relative z-10 mx-auto max-w-5xl px-6 py-20 lg:px-10">
+      <div className="relative z-10 mx-auto max-w-5xl px-5 py-14 sm:px-6 sm:py-20 lg:px-10">
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mx-auto mb-10 max-w-lg text-center text-lg text-fg/75"
+          className="mx-auto mb-8 max-w-lg text-center text-base text-fg/75 sm:mb-10 sm:text-lg"
         >
           Концерты, фестивали, студийные сессии и мастер-классы.<br />
           «{artist.wisdom}»
@@ -83,7 +80,7 @@ export function Contact() {
               href={btn.href}
               target={btn.href.startsWith("mailto") ? undefined : "_blank"}
               rel={btn.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-              className={`w-full border-2 border-fg px-8 py-5 text-center font-display text-lg shadow-[6px_6px_0_0_var(--fg)] transition hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0_0_var(--fg)] sm:w-auto ${btn.bg} ${btn.text}`}
+              className={`w-full border-2 border-fg px-5 py-4 text-center font-display text-sm shadow-[5px_5px_0_0_var(--fg)] transition hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0_0_var(--fg)] sm:w-auto sm:px-8 sm:py-5 sm:text-lg ${btn.bg} ${btn.text}`}
               style={{ boxShadow: `6px 6px 0 0 ${btn.shadow}` }}
             >
               {btn.label}

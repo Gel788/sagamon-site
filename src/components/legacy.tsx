@@ -23,7 +23,7 @@ export function Legacy() {
       </span>
 
       {/* header */}
-      <div className="relative z-10 px-6 pt-24 pb-12 lg:px-14">
+      <div className="relative z-10 px-5 pt-16 pb-8 sm:px-6 sm:pt-24 sm:pb-12 lg:px-14">
         <motion.span
           initial={{ opacity: 0, y: 14, rotate: 0 }}
           whileInView={{ opacity: 1, y: 0, rotate: 3 }}
@@ -37,7 +37,7 @@ export function Legacy() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.08, ease }}
-          className="font-display mt-5 text-[clamp(3rem,9vw,7rem)] text-fg"
+          className="font-display mt-5 text-[clamp(2rem,8vw,7rem)] leading-none text-fg"
         >
           ИЗ ВЛАДИКАВКАЗА
           <br />
@@ -57,12 +57,10 @@ export function Legacy() {
             whileHover={{ x: 12 }}
             className="group relative flex items-stretch overflow-hidden border-b-2 border-fg bg-bg transition-colors hover:bg-hot"
           >
-            {/* big number on the left */}
-            <span className="flex w-20 shrink-0 items-center justify-center border-r-2 border-fg bg-bg-elevated font-display text-3xl text-fg/40 transition-colors group-hover:border-fg group-hover:bg-hot group-hover:text-fg md:w-28 md:text-4xl">
+            <span className="flex w-14 shrink-0 items-center justify-center border-r-2 border-fg bg-bg-elevated font-display text-2xl text-fg/40 transition-colors group-hover:border-fg group-hover:bg-hot group-hover:text-fg sm:w-20 sm:text-3xl md:w-28 md:text-4xl">
               {String(i + 1).padStart(2, "0")}
             </span>
-            {/* award text */}
-            <p className="flex items-center gap-4 px-6 py-6 font-cond text-base font-medium text-fg transition-colors group-hover:text-fg md:text-xl">
+            <p className="flex min-w-0 items-center gap-3 px-4 py-5 font-cond text-sm font-medium leading-snug text-fg transition-colors group-hover:text-fg sm:gap-4 sm:px-6 sm:py-6 sm:text-base md:text-xl">
               <span className="h-3 w-3 shrink-0 rotate-45 bg-electric transition-colors group-hover:bg-fg" />
               {award}
             </p>
@@ -71,7 +69,7 @@ export function Legacy() {
       </div>
 
       {/* endorsement chips */}
-      <div className="relative z-10 flex flex-wrap items-center justify-center gap-4 px-6 py-16 lg:px-14">
+      <div className="relative z-10 flex flex-wrap items-center justify-center gap-3 px-5 py-12 sm:gap-4 sm:px-6 sm:py-16 lg:px-14">
         {endorsements.map((brand, i) => (
           <motion.span
             key={brand}
@@ -80,7 +78,7 @@ export function Legacy() {
             viewport={{ once: true }}
             transition={{ delay: i * 0.05 }}
             whileHover={{ rotate: 0, scale: 1.1 }}
-            className={`sticker text-lg font-bold shadow-[4px_4px_0_0_#000] md:text-xl ${chipTones[i % chipTones.length]}`}
+            className={`sticker text-base font-bold shadow-[4px_4px_0_0_#000] sm:text-lg md:text-xl ${chipTones[i % chipTones.length]}`}
           >
             {brand}
           </motion.span>

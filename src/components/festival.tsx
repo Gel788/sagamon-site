@@ -9,7 +9,7 @@ const ease = [0.16, 1, 0.3, 1] as const;
 
 export function Festival() {
   return (
-    <section id="festival" className="relative overflow-hidden border-t-2 border-fg py-28 md:py-36">
+    <section id="festival" className="relative overflow-hidden border-t-2 border-fg py-16 sm:py-24 md:py-36">
       {/* background */}
       <div className="duotone absolute inset-0">
         <Image src={images.action} alt="" fill className="object-cover object-center" sizes="100vw" />
@@ -22,8 +22,8 @@ export function Festival() {
         04
       </span>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid gap-14 md:grid-cols-2 md:items-center">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-10">
+        <div className="grid gap-10 sm:gap-14 md:grid-cols-2 md:items-center">
           <div>
             <motion.span
               initial={{ opacity: 0, y: 14, rotate: 0 }}
@@ -38,7 +38,7 @@ export function Festival() {
               whileInView={{ opacity: 1, y: 0, rotate: -1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.08, ease }}
-              className="font-display mt-5 origin-left text-[clamp(4rem,12vw,9rem)] leading-none text-fg"
+              className="font-display mt-5 origin-left text-[clamp(2.5rem,11vw,9rem)] leading-none text-fg"
             >
               SD{" "}
               <span className="mark bg-yellow text-bg">DRUM</span>
@@ -52,7 +52,7 @@ export function Festival() {
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-lg leading-relaxed text-fg/90"
+              className="text-base leading-relaxed text-fg/90 sm:text-lg"
             >
               Школа и шоу-проект, основанный Давидом. Образование, перформанс и живая энергия барабанов.
             </motion.p>
@@ -69,7 +69,7 @@ export function Festival() {
                 "Фестивальные выступления SD Drum Show",
                 "Магазин SD Music Shop — sdmusic.shop",
               ].map((item) => (
-                <li key={item} className="flex items-center gap-3 border-l-4 border-electric pl-4 font-cond text-base font-medium text-fg">
+                <li key={item} className="flex items-start gap-3 border-l-4 border-electric pl-3 font-cond text-sm font-medium text-fg sm:items-center sm:pl-4 sm:text-base">
                   {item}
                 </li>
               ))}
@@ -80,13 +80,13 @@ export function Festival() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.18 }}
-              className="mt-10 flex flex-wrap gap-4"
+              className="mt-8 grid grid-cols-1 gap-3 sm:mt-10 sm:flex sm:flex-wrap sm:gap-4"
             >
               <a
                 href={links.sdDrumSchool}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-fg bg-yellow px-8 py-4 font-display text-lg text-bg shadow-[6px_6px_0_0_var(--fg)] transition hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0_0_var(--fg)]"
+                className="w-full border-2 border-fg bg-yellow px-5 py-3.5 text-center font-display text-sm text-bg shadow-[5px_5px_0_0_var(--fg)] transition hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0_0_var(--fg)] sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
               >
                 SD DRUM SCHOOL
               </a>
@@ -94,7 +94,7 @@ export function Festival() {
                 href={links.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-fg bg-transparent px-8 py-4 font-display text-lg text-fg transition hover:bg-fg hover:text-bg"
+                className="w-full border-2 border-fg bg-transparent px-5 py-3.5 text-center font-display text-sm text-fg transition hover:bg-fg hover:text-bg sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
               >
                 INSTAGRAM
               </a>
@@ -102,7 +102,7 @@ export function Festival() {
                 href={links.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-fg bg-transparent px-8 py-4 font-display text-lg text-fg transition hover:bg-fg hover:text-bg"
+                className="w-full border-2 border-fg bg-transparent px-5 py-3.5 text-center font-display text-sm text-fg transition hover:bg-fg hover:text-bg sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
               >
                 YOUTUBE
               </a>
@@ -110,7 +110,7 @@ export function Festival() {
                 href={links.shop}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-fg bg-electric px-8 py-4 font-display text-lg text-bg shadow-[6px_6px_0_0_var(--fg)] transition hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0_0_var(--fg)]"
+                className="w-full border-2 border-fg bg-electric px-5 py-3.5 text-center font-display text-sm text-bg shadow-[5px_5px_0_0_var(--fg)] transition hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0_0_var(--fg)] sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
               >
                 SD MUSIC SHOP
               </a>

@@ -9,6 +9,13 @@ export function Nav() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 48);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -21,12 +28,12 @@ export function Nav() {
         scrolled ? "border-b-2 border-fg bg-bg" : ""
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        <a href="#" className="font-display text-2xl text-fg">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-5 py-3.5 sm:px-6 sm:py-4 lg:px-10">
+        <a href="#" className="font-display text-xl text-fg sm:text-2xl">
           SAGAMON
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Основная">
+        <nav className="hidden items-center gap-8 lg:flex" aria-label="Основная">
           {navItems.map((item) => (
             <a
               key={item.href}
@@ -38,20 +45,28 @@ export function Nav() {
           ))}
         </nav>
 
-        <a
-          href="#contact"
-          className="hidden border-2 border-fg bg-electric px-5 py-2 font-display text-sm text-bg transition hover:bg-fg md:inline-flex"
-        >
-          СВЯЗЬ
-        </a>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <a
+            href="#contact"
+            className="border-2 border-fg bg-electric px-3 py-1.5 font-display text-xs text-bg sm:px-4 sm:py-2 sm:text-sm lg:hidden"
+          >
+            СВЯЗЬ
+          </a>
 
-        <button
-          type="button"
-          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
-          aria-label={open ? "Закрыть меню" : "Открыть меню"}
-          aria-expanded={open}
-          onClick={() => setOpen(!open)}
-        >
+          <a
+            href="#contact"
+            className="hidden border-2 border-fg bg-electric px-5 py-2 font-display text-sm text-bg transition hover:bg-fg lg:inline-flex"
+          >
+            СВЯЗЬ
+          </a>
+
+          <button
+            type="button"
+            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
+            aria-label={open ? "Закрыть меню" : "Открыть меню"}
+            aria-expanded={open}
+            onClick={() => setOpen(!open)}
+          >
           <span
             className={`h-0.5 w-6 bg-fg transition ${open ? "translate-y-2 rotate-45" : ""}`}
           />
@@ -59,7 +74,8 @@ export function Nav() {
           <span
             className={`h-0.5 w-6 bg-fg transition ${open ? "-translate-y-2 -rotate-45" : ""}`}
           />
-        </button>
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
@@ -68,14 +84,14 @@ export function Nav() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden border-t-2 border-fg bg-bg md:hidden"
+            className="overflow-hidden border-t-2 border-fg bg-bg lg:hidden"
           >
-            <nav className="flex flex-col gap-4 px-6 py-6" aria-label="Мобильная">
+            <nav className="flex flex-col gap-3 px-5 py-5 sm:gap-4 sm:px-6 sm:py-6" aria-label="Мобильная">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="font-cond text-lg font-semibold uppercase tracking-wider text-fg"
+                  className="font-cond text-base font-semibold uppercase tracking-wider text-fg sm:text-lg"
                   onClick={() => setOpen(false)}
                 >
                   {item.label}

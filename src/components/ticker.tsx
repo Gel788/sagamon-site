@@ -15,13 +15,13 @@ export function Ticker({ tone = "electric" }: { tone?: "electric" | "hot" }) {
   const text = tone === "electric" ? "text-bg" : "text-bg";
 
   return (
-    <div className={`overflow-hidden py-3 ${bg}`}>
+    <div className={`overflow-hidden py-2.5 sm:py-3 ${bg}`}>
       <div className="ticker-track flex whitespace-nowrap">
-        <span className={`font-display px-4 text-2xl ${text} md:text-3xl`}>
+        <span className={`font-display px-4 text-lg sm:text-2xl ${text} md:text-3xl`}>
           {line}   ●   {line}   ●
         </span>
         <span
-          className={`font-display px-4 text-2xl ${text} md:text-3xl`}
+          className={`font-display px-4 text-lg sm:text-2xl ${text} md:text-3xl`}
           aria-hidden
         >
           {line}   ●   {line}   ●

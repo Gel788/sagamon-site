@@ -43,8 +43,8 @@ export function PhotoStrip() {
         03
       </span>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 md:py-24 lg:px-10">
-        <div className="mb-10 flex flex-col gap-4 md:mb-14 md:flex-row md:items-end md:justify-between">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 py-12 sm:px-6 sm:py-16 md:py-24 lg:px-10">
+        <div className="mb-8 flex flex-col gap-3 sm:mb-10 sm:gap-4 md:mb-14 md:flex-row md:items-end md:justify-between">
           <div>
             <motion.span
               initial={{ opacity: 0, x: -16, rotate: 0 }}
@@ -59,7 +59,7 @@ export function PhotoStrip() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.06, ease }}
-              className="font-display mt-5 text-[clamp(2.75rem,8vw,6rem)] leading-none text-fg"
+              className="font-display mt-4 text-[clamp(2rem,8vw,6rem)] leading-none text-fg sm:mt-5"
             >
               НА СЦЕНЕ
               <br />
@@ -148,26 +148,25 @@ export function PhotoStrip() {
           })}
         </div>
 
-        {/* mobile */}
-        <div className="flex flex-col gap-6 md:hidden">
+        {/* mobile — horizontal snap scroll */}
+        <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 md:hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {photos.map((p, i) => (
             <motion.figure
               key={p.src}
-              initial={{ opacity: 0, y: 24, rotate: p.rotate * 2 }}
-              whileInView={{ opacity: 1, y: 0, rotate: p.rotate }}
+              initial={{ opacity: 0, x: 24 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, ease }}
-              whileHover={{ y: -6, rotate: 0 }}
-              className="relative aspect-[4/5] overflow-hidden border-2 border-fg bg-bg"
-              style={{ boxShadow: `8px 8px 0 0 ${p.shadow}` }}
+              className="relative aspect-[4/5] w-[82vw] max-w-[340px] shrink-0 snap-center overflow-hidden border-2 border-fg bg-bg"
+              style={{ boxShadow: `6px 6px 0 0 ${p.shadow}` }}
             >
-              <Image src={p.src} alt={p.label} fill className="object-cover" sizes="100vw" />
+              <Image src={p.src} alt={p.label} fill className="object-cover" sizes="85vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/10 to-transparent" />
-              <figcaption className="absolute inset-x-0 bottom-0 p-5">
-                <span className={`sticker mb-2 ${p.sticker}`}>{p.tag}</span>
-                <p className="font-display text-lg text-fg">{p.label}</p>
+              <figcaption className="absolute inset-x-0 bottom-0 p-4">
+                <span className={`sticker mb-2 text-[10px] ${p.sticker}`}>{p.tag}</span>
+                <p className="font-display text-base leading-tight text-fg">{p.label}</p>
               </figcaption>
-              <span aria-hidden className="absolute right-4 top-4 font-display text-4xl text-fg/20">
+              <span aria-hidden className="absolute right-3 top-3 font-display text-3xl text-fg/20">
                 0{i + 1}
               </span>
             </motion.figure>

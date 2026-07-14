@@ -19,7 +19,7 @@ export function About() {
       {/* ─── Split layout ─────────────────────────────── */}
       <div className="relative z-10 grid lg:grid-cols-2">
         {/* left — text */}
-        <div className="flex flex-col justify-center px-6 py-24 lg:px-14 lg:py-32">
+        <div className="flex flex-col justify-center px-5 py-16 sm:px-6 sm:py-20 lg:px-14 lg:py-32">
           <motion.span
             initial={{ opacity: 0, x: -20, rotate: 0 }}
             whileInView={{ opacity: 1, x: 0, rotate: -3 }}
@@ -34,14 +34,14 @@ export function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.08, ease }}
-            className="font-display mt-6 text-[clamp(3rem,7vw,5.5rem)] leading-none text-fg"
+            className="font-display mt-6 text-[clamp(2.25rem,9vw,5.5rem)] leading-none text-fg"
           >
             ОТ СКРИПКИ
             <br />
             <span className="mark -rotate-1 bg-electric text-bg">К УДАРНЫМ</span>
           </motion.h2>
 
-          <div className="mt-8 space-y-5 text-lg leading-relaxed text-fg/80">
+          <div className="mt-6 space-y-4 text-base leading-relaxed text-fg/80 sm:mt-8 sm:space-y-5 sm:text-lg">
             {bio.map((p, i) => (
               <motion.p
                 key={i}
@@ -59,10 +59,29 @@ export function About() {
             initial={{ opacity: 0, y: 12, rotate: 0 }}
             whileInView={{ opacity: 1, y: 0, rotate: -1.5 }}
             viewport={{ once: true }}
-            className="mt-10 max-w-lg border-2 border-fg bg-bg-elevated p-6 font-cond text-xl font-semibold text-fg shadow-[8px_8px_0_0_var(--hot)]"
+            className="mt-8 max-w-lg border-2 border-fg bg-bg-elevated p-5 font-cond text-lg font-semibold text-fg shadow-[6px_6px_0_0_var(--hot)] sm:mt-10 sm:p-6 sm:text-xl"
           >
             «{artist.quote}»
           </motion.blockquote>
+
+          {/* mobile photo */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="relative mt-8 aspect-[4/5] overflow-hidden border-2 border-fg shadow-[6px_6px_0_0_var(--electric)] lg:hidden"
+          >
+            <Image
+              src={images.studio}
+              alt="Давид Сагомонянц"
+              fill
+              className="object-cover object-center"
+              sizes="100vw"
+            />
+            <span className="sticker absolute bottom-4 left-4 bg-yellow text-bg">
+              Vladikavkaz, 1987 · © TAMA
+            </span>
+          </motion.div>
         </div>
 
         {/* right — photo, edge-to-edge */}
@@ -108,26 +127,23 @@ export function About() {
             viewport={{ once: true }}
             transition={{ delay: i * 0.07, ease }}
             whileHover={{ backgroundColor: "var(--electric)", color: "var(--bg)" }}
-            className="group flex cursor-default items-center gap-6 border-b-2 border-fg bg-bg px-6 py-8 transition-colors lg:px-14"
+            className="group flex cursor-default flex-col gap-2 border-b-2 border-fg bg-bg px-5 py-6 transition-colors sm:flex-row sm:items-center sm:gap-6 sm:px-6 sm:py-8 lg:px-14"
             style={{ color: "var(--fg)" }}
           >
-            <span
-              className="font-display text-[clamp(3rem,10vw,7rem)] leading-none text-electric transition-colors group-hover:text-bg"
-              style={{ minWidth: "clamp(7rem,18vw,16rem)" }}
-            >
+            <span className="font-display text-[clamp(2.5rem,14vw,7rem)] leading-none text-electric transition-colors group-hover:text-bg sm:min-w-[clamp(5rem,18vw,16rem)]">
               {stat.value}
             </span>
-            <div>
-              <p className="font-display text-2xl text-fg transition-colors group-hover:text-bg md:text-3xl">
+            <div className="min-w-0 flex-1">
+              <p className="font-display text-xl text-fg transition-colors group-hover:text-bg sm:text-2xl md:text-3xl">
                 {stat.label}
               </p>
-              <p className="mt-1 font-cond text-sm uppercase tracking-wider opacity-60 transition-colors group-hover:opacity-80">
+              <p className="mt-1 font-cond text-xs uppercase tracking-wider opacity-60 transition-colors group-hover:opacity-80 sm:text-sm">
                 {stat.sub}
               </p>
             </div>
             <span
               aria-hidden
-              className="ml-auto font-display text-[8vw] text-fg/5 transition-colors group-hover:text-bg/10"
+              className="hidden font-display text-4xl text-fg/5 transition-colors group-hover:text-bg/10 sm:ml-auto sm:block md:text-[5vw]"
             >
               {String(i + 1).padStart(2, "0")}
             </span>
